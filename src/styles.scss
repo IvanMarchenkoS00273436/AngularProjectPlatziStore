@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color:#00203E;
+    --secondary-color:#787878;
+    --tertiary-color:#FFFBFA;
+    --quaternary-color:#EAE7CB;
+    --quinary-color:#FFFAEA;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--tertiary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}

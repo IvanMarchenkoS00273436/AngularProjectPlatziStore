@@ -1,0 +1,58 @@
+// Breadcrumb styles
+.home-link {
+    color: var(--primary-color);
+}
+
+// Carousel styles
+.carousel-container {
+    background-color: var(--quinary-color);
+}
+
+.carousel-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-image {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.control-icon {
+    background-color: rgba(0, 32, 62, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+// Product card styles
+.product-card {
+    background-color: var(--quinary-color);
+}
+
+.product-title {
+    color: var(--primary-color);
+}
+
+.product-price {
+    color: var(--primary-color);
+}
+
+.product-description {
+    color: var(--secondary-color);
+}
+
+// Loading styles
+.loading-spinner {
+    width: 3rem;
+    height: 3rem;
+}
+
+.loading-title {
+    color: var(--primary-color);
+}
+
+.carousel-inner {
+    height: 100%;
+}

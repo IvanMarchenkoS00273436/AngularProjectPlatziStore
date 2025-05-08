@@ -1,0 +1,60 @@
+<div class="main-hero">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold hero-title">Welcome to Platzi Store</h1>
+                <p class="lead hero-subtitle">A robust e-commerce showcase application built with Angular 19</p>
+                <p class="hero-text">This frontend application interacts with the Platzi Fake Store API to demonstrate
+                    modern web development techniques. Created by students of Atlantic Technological University as a
+                    practical learning project.</p>
+                <div class="mt-4">
+                    <a [routerLink]="['/catalog']" class="btn btn-primary btn-lg px-4 me-3">
+                        <i class="bi bi-grid me-2"></i>Browse Catalog
+                    </a>
+                    <a [routerLink]="['/about']" class="btn btn-secondary btn-lg px-4">
+                        <i class="bi bi-info-circle me-2"></i>About Project
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="hero-image-container">
+                    <i class="bi bi-shop hero-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="featured-products py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Check out our top 3 trending items</p>
+        </div>
+
+        <div class="row g-4">
+            @for (product of topthreeProducts; track product.id) {
+            <div class="col-md-4">
+                <div class="card featured-card h-100 shadow-sm">
+                    <div class="featured-img-container p-3">
+                        <img [src]="product.images[0]" class="featured-img" alt="{{ product.title }}">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title featured-title">{{ product.title }}</h5>
+                        <p class="card-text featured-description flex-grow-1">{{ product.description | slice:0:100 }}...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="featured-price fw-bold">€{{ product.price }}</span>
+                            <div>
+                                <a [routerLink]="['/products', product.id]"
+                                    class="btn btn-sm btn-secondary me-1">Details</a>
+                                <button class="btn btn-sm btn-primary">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

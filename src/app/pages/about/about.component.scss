@@ -1,0 +1,62 @@
+// Page header
+.page-title {
+    color: var(--primary-color);
+}
+
+.subtitle {
+    color: var(--secondary-color);
+}
+
+.divider {
+    background-color: var(--quaternary-color);
+    height: 3px;
+    opacity: 1;
+}
+
+// Profile card
+.profile-card {
+    background-color: var(--quinary-color);
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    background-color: var(--quaternary-color);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-icon {
+    font-size: 90px;
+    color: var(--primary-color);
+}
+
+.student-name {
+    color: var(--primary-color);
+}
+
+.student-id,
+.school-name {
+    color: var(--secondary-color);
+}
+
+// Content cards
+.content-card {
+    background-color: var(--quinary-color);
+}
+
+.section-title {
+    color: var(--primary-color);
+}
+
+.section-text {
+    color: var(--secondary-color);
+}
+
+.check-icon {
+    color: var(--primary-color);
+}
+
+.skill-text {
+    color: var(--secondary-color);
+}

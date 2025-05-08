@@ -1,0 +1,19 @@
+<div class="container">
+    @if (isLoading) {
+        <div class="d-flex justify-content-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+
+    @if (products.length > 0) {
+        @for (product of products; track product.id) {
+            <app-product [product]="product"></app-product>
+        }
+    } @else if (!isLoading) {
+        <div class="alert alert-info text-center">
+            No products found. Try a different search term.
+        </div>
+    }
+</div>

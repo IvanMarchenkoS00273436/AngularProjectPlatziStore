@@ -1,0 +1,11 @@
+<div class="container my-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="mb-4">Product Catalog</h1>
+            <app-search-bar (searchResults)="onSearchResults($event)"></app-search-bar>
+        </div>
+    </div>
+
+    <app-products-list [products]="products" [loadProducts]="!searching">
+    </app-products-list>
+</div>

@@ -1,0 +1,29 @@
+.navbar-main {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand {
+    color: var(--tertiary-color);
+}
+
+.navbar-toggler {
+    border-color: var(--tertiary-color);
+}
+
+.nav-link {
+    color: var(--tertiary-color);
+}
+
+.active {
+    font-weight: bold;
+    color: var(--quaternary-color) !important;
+    border-bottom: 2px solid var(--quaternary-color);
+}
+
+.nav-link:hover {
+    color: var(--quinary-color) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem var(--quaternary-color);
+}

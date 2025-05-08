@@ -1,0 +1,28 @@
+<div class="search-container mb-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">Search Products</h5>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for products..." 
+                        [(ngModel)]="searchTerm"
+                        (keyup.enter)="search()">
+
+                <button class="btn btn-primary" 
+                    type="button" 
+                    (click)="search()" 
+                    [disabled]="isLoading">
+                    <i class="bi" [ngClass]="isLoading ? 'bi-hourglass' : 'bi-search'"></i>
+                    {{ isLoading ? 'Searching...' : 'Search' }}
+                </button>
+
+                <button *ngIf="searchTerm" 
+                    class="btn btn-outline-secondary" 
+                    type="button" 
+                    (click)="clearSearch()">
+                    <i class="bi bi-x-circle"></i> Clear
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div>

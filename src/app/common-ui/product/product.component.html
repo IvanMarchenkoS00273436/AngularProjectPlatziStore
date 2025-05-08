@@ -1,0 +1,29 @@
+@if(product) {
+    <div class="card product-card w-100 p-3 mb-3 shadow-sm">
+        <div class="row w-100 g-3">
+
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12
+                    d-flex justify-content-center align-items-center">
+                <img 
+                    [src]="product.images[0]" 
+                    class="product-card__image img-fluid rounded"
+                    alt="{{ product.title }}" />
+            </div>
+            
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 
+                    d-flex flex-column justify-content-center px-3 py-sm-3">
+                <h2 class="product-card__title h5 mb-2">{{ product.title }}</h2>
+                <p class="product-card__description mb-2">{{ product.description }}</p>
+                <p class="product-card__price fs-4 fw-bold mb-2">€{{ product.price }}</p>
+            </div>
+            
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 
+                    d-flex flex-column justify-content-center align-items-center align-items-md-start">
+                <div class="d-grid gap-2 w-100 px-sm-5 px-md-0">
+                    <a class="btn btn-primary">Add to cart</a>
+                    <a [routerLink]="['/products', product.id]" class="btn btn-secondary">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
