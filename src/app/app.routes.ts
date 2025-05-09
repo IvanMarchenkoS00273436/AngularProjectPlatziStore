@@ -3,10 +3,12 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { MainComponent } from './pages/main/main.component';
 import { AboutComponent } from './pages/about/about.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 export const routes: Routes = [
     { path: 'products/:id', component: ProductDetailsComponent},
     { path: 'catalog', component: CatalogComponent},
     { path: '', component: MainComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'cart', component: CartComponent}
 ];
